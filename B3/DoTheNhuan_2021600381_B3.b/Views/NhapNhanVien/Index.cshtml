@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    table {
+        width: 500px;
+    }
+
+    tr, td {
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+
+        tr td:first-child {
+            font-weight: bold;
+        }
+
+    tr {
+        width: 400px;
+    }
+
+    input[type=text], select {
+        width: 200px;
+    }
+
+    select {
+        padding: 0.5rem;
+    }
+
+    input[type=radio], input[type=checkbox] {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .btn {
+        border: 1px solid #000;
+        font-weight: bold;
+        margin: 0 1rem;
+    }
+</style>
+
+
+<h2>Nhập Nhân Viên</h2>
+
+<form action="/NhapNhanVien/Data" method="post">
+    <table border="1">
+        <tr>
+            <td>Mã nhân viên:</td>
+            <td><input type="text" name="id" value="" /></td>
+        </tr>
+        <tr>
+            <td>Họ tên:</td>
+            <td><input type="text" name="fullname" value="" /></td>
+        </tr>
+        <tr>
+            <td>Ngày sinh:</td>
+            <td><input type="text" name="birthday" value="" /></td>
+        </tr>
+        <tr>
+            <td>Giới tính:</td>
+            <td>
+                <label><input type="radio" name="gender" value="male" /> Nam</label>
+                <label><input type="radio" name="gender" value="female" /> Nữ</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Chức vụ:</td>
+            <td>
+                <select name="role">
+                    <option value="manager">Trưởng phòng</option>
+                    <option value="employee">Nhân viên</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Ngoại ngữ:</td>
+            <td>
+                <label><input type="checkbox" name="languages" value="el" /> Anh</label>
+                <label><input type="checkbox" name="languages" value="fr" /> Pháp</label>
+                <label><input type="checkbox" name="languages" value="rus" /> Nga</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="actions">
+                    <button class="btn" type="submit">LƯU</button>
+                    <button class="btn" type="reset">XÓA</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
+

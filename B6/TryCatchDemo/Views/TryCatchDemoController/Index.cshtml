@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Try Catch Demo</h2>
+
+@{
+    var dataFilePath = "~/dataFile.txt";
+    var fileContent = "";
+    var physicalPath = Server.MapPath(dataFilePath);
+    var userMessage = "Hello World, the time is " + DateTime.Now;
+    var userErrMsg = "";
+    var errMsg = "";
+
+    if (IsPost)
+    {
+        try
+        {
+            //fileContent = File.ReadAllText(@"c:\dataFile.txt");
+
+            fileContent = File.ReadAllText(physicalPath);
+        }
+        catch (FileNotFoundException ex)
+        {
+            errMsg = ex.Message;
+            userErrMsg = "A file could not open.";
+        }
+        catch (DirectoryNotFoundException ex)
+        {
+            errMsg = ex.Message;
+            userErrMsg = "A Directory could not open.";
+        }
+    }
+    else
+    {
+        File.WriteAllText(physicalPath, userMessage);
+    }
+}
+<form action="" method="post">
+    <input type="submit" value="Open File" />
+</form>
+<p></p>
+<p>@physicalPath</p>
+<p></p>
+<h3>@fileContent</h3>
+<p></p>
+<p>@userErrMsg</p>
+
+
