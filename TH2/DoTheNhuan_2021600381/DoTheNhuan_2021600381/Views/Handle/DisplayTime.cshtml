@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+
+    DateTime currentTime = DateTime.Now;
+
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    tr {
+        border: 1px solid #000;
+    }
+
+    tr, td, th {
+        padding: 1rem;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayTime</title>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <h1>Hien Thi Thoi Gian</h1>
+
+            <div class="content">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Day</td>
+                        <td>@currentTime.Day</td>
+                    </tr>
+                    <tr>
+                        <td>Hour</td>
+                        <td>@currentTime.Hour</td>
+                    </tr>
+                    <tr>
+                        <td>Minute</td>
+                        <td>@currentTime.Minute</td>
+                    </tr>
+                    <tr>
+                        <td>Second</td>
+                        <td>@currentTime.Second</td>
+                    </tr>
+                </table>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</body>
+</html>

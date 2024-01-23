@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    input {
+        display: inline-block;
+    }
+
+    table {
+    }
+
+    tr, td {
+        padding: 0.5rem;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+    }
+</style>
+
+<div class="container">
+
+
+    <div class="content">
+
+
+        <h1>Employee Information</h1>
+
+        <form action="/Emps/HandleForm" method="post">
+            <table border="0">
+                <tr>
+                    <td><label>First Name</label></td>
+                    <td><input class="form-control" type="text" name="FirstName" value="" /></td>
+                </tr>
+                <tr>
+                    <td><label>Last Name</label></td>
+                    <td><input class="form-control" type="text" name="LastName" value="" /></td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td>
+                        <label>
+                            <input class="" type="checkbox" name="Gender" value="Male" />
+                            Male
+                        </label>
+                        <label>
+                            <input class="" type="checkbox" name="Gender" value="Female" />
+                            Female
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>DOB</label></td>
+                    <td>
+                        <input style="width: 100%" type="date" name="DOB" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Salary</label></td>
+                    <td><input class="form-control" type="text" name="Salary" value="" /></td>
+                </tr>
+                <tr>
+                    <td><label>Number work days</label></td>
+                    <td><input class="form-control" type="text" name="WorkDays" value="" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="bg-primary" type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+
+
+            </table>
+
+        </form>
+
+
+
+
+    </div>
+
+
+
+</div>
+

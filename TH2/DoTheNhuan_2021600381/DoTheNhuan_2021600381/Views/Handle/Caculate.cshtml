@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Caculate";
+}
+
+<style>
+    tr, td, th {
+        padding: 1rem;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form {
+        width: 600px;
+    }
+
+        .form div {
+            display: flex;
+            flex-direction: row;
+            margin: 1rem;
+        }
+
+            .form div label {
+                width: 30%;
+            }
+
+    .list-btn {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+        .list-btn button {
+            padding: 10px 20px;
+            min-width: 80px;
+        }
+</style>
+
+<div class="container">
+    <h1>Tinh Toan</h1>
+    <div class="content">
+        <form class="form" action="/Handle/HandleCaculate" method="post">
+            <div class="">
+                <label class="">
+                    Nhập số thứ 1
+                </label>
+                <input type="text" class="form-control" name="first_number" value="@ViewBag.firstNumber" />
+            </div>
+            <div class="">
+                <label>Nhập số thứ 2</label>
+                <input type="text" class="form-control" name="second_number" value="@ViewBag.secondNumber" />
+            </div>
+            <div class="">
+                <label>Kết quả</label>
+                <input type="text" class="form-control" name="res" value="@ViewBag.res" />
+            </div>
+            <div class="list-btn">
+                <button type="submit" name="button" value="+">Cộng</button>
+                <button type="submit" name="button" value="-">Trừ</button>
+                <button type="submit" name="button" value="*">Nhân</button>
+                <button type="submit" name="button" value="/">Chia</button>
+            </div>
+        </form>
+    </div>
+</div>

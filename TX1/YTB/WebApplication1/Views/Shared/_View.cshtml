@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_View</title>
+    <style>
+        body {
+            background: #808080;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="chung"> 
+        <header>
+            <h1>Website cua toi</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </nav>
+        <div>
+            @RenderBody()
+        </div>
+        <footer>
+            Cam on da ghe qua
+        </footer>
+    </div>
+</body>
+</html>

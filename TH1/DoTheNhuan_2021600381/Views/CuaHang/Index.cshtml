@@ -1,0 +1,89 @@
+﻿@model DoTheNhuan_2021600381.Models.CuonSach
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<style>
+    input {
+        display: inline-block;
+    }
+
+    table {
+    }
+
+    tr, td {
+        padding: 0.5rem;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        padding: 0.5rem 1rem;
+    }
+</style>
+
+<div class="container">
+
+
+    <div class="content">
+
+
+        <h1>NHẬP SÁCH MỚI</h1>
+
+        <form action="/CuaHang/HandleForm" method="post">
+            <table border="0">
+                <tr>
+                    <td><label>Tên sách</label></td>
+                    <td><input class="form-control" type="text" name="TenSach" value="" /></td>
+                </tr>
+                <tr>
+                    <td><label>Thể loại</label></td>
+                    <td>
+                        <select multiple name="TheLoai">
+                            <option value="vh">Văn học</option>
+                            <option value="nn">Ngoại ngữ</option>
+                            <option value="khkt">Khoa học kỹ thuật</option>
+                            <option value="tt">Tiểu thuyết</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Số lượng</label></td>
+                    <td><input class="form-control" type="number" name="SoLuong" value="" /></td>
+                </tr>
+                <tr>
+                    <td><label>Gía tiền</label></td>
+                    <td><input class="form-control" type="number" name="GiaTien" value="" /></td>
+                </tr>
+
+                <tr>
+                    <td><button class="bg-primary" type="submit">Gửi đi</button></td>
+                    <td><button type="reset">Làm lại</button></td>
+                </tr>
+                @*@if (@Model != null || @Model.TheLoai == "")
+                {
+                    <div class="alert alert-success" role="alert">
+                        <p>@Model.TenSach - @Model.TheLoai - @Model.SoLuong - @Model.GiaTien - @Model.SoTienThanhToan</p>
+                    </div>
+                }*@
+
+            </table>
+
+        </form>
+
+
+
+
+    </div>
+
+
+
+</div>
+

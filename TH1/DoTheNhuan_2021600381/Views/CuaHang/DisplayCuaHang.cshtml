@@ -1,0 +1,70 @@
+﻿@model DoTheNhuan_2021600381.Models.CuaHang
+@{
+    ViewBag.Title = "DisplayCuaHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var ch = @Model;
+
+}
+
+<style>
+
+    table {
+    }
+
+    tr, td, th {
+        padding: 0.5rem;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    table {
+        margin: auto;
+    }
+</style>
+
+<div class="container">
+    <div class="content">
+
+        <h1>HIỂN THỊ CỬA HÀNG</h1>
+
+        <h2>Mã cửa hàng: @ch.mach</h2>
+        <h2>Tên cửa hàng: @ch.tench</h2>
+        <h2>Địa chỉ: @ch.diachi</h2>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Tên sách</th>
+                    <th>Thể loại</th>
+                    <th>Số lượng</th>
+                    <th>Giá tiền</th>
+                    <th>Số tiền thanh toán</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ch.li)
+                {
+                    <tr>
+                        <td>@item.TenSach</td>
+                        <td>@item.TenTheLoai</td>
+                        <td>@item.SoLuong</td>
+                        <td>@item.GiaTien</td>
+                        <td>@item.SoTienThanhToan</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+    </div>
+
+</div>
+
+

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="header__heading">Hanoi University of Industry</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-2 g-0 border-thin h-100">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav d-flex flex-col navbar">
+                            <li>@Html.ActionLink("Giới thiệu", "Index", "HaUI")</li>
+                            <li>@Html.ActionLink("Tuyển sinh", "TuyenSinh", "HaUI")</li>
+                            <li>@Html.ActionLink("Đào tạo", "DaoTao", "HaUI")</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8 h-100 g-0 border-thin border-left-0 border-right-0">
+                    @RenderBody()
+                </div>
+                <div class="col-md-2 sub-content g-0 border-thin">
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+    <footer class="">
+        <div class="container">
+            <h3>
+                <a href="#">
+                    Đỗ Thế Nhuận - 2021600381
+                </a>
+            </h3>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery")
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "RegisterForm";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    tr, td {
+        padding: 0.5rem;
+    }
+
+    tr {
+        border: 1px solid #000;
+    }
+
+    button {
+        padding: 5px 10px;
+        min-width: 60px;
+    }
+</style>
+
+
+<h2>RegisterForm</h2>
+
+<div class="container">
+    <form action="/Handle/HandleRegister" method="post">
+
+        <table>
+            <tr>
+                <td colspan="2"><h3>Registration Form</h3></td>
+            </tr>
+
+            <tr>
+                <td>First Name</td>
+                <td>
+                    <input type="text" name="first_name" value="" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    <input type="text" name="last_name" value="" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="text" name="email" value="" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="text" name="password" value="" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>City</td>
+                <td>
+                    <select name="city">
+                        <option value="hn">Hanoi</option>
+                        <option value="hp">Hai phong</option>
+                        <option value="qn">Quang ninh</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <label>
+                        <input type="radio" name="gender" value="male" /> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" /> Female
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button type="submit">Save</button>
+                    <button type="reset">Cancel</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+
+</div>

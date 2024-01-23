@@ -1,0 +1,67 @@
+﻿@model DoTheNhuan_2021600381.Models.CuonSach
+@{
+    ViewBag.Title = "HandleForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    table {
+    }
+
+    tr, td {
+        padding: 0.5rem;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    table {
+        margin: auto;
+    }
+</style>
+
+<div class="container">
+
+    <h1>THÔNG TIN SÁCH VỪA NHẬP</h1>
+    <div class="content">
+
+        <table border="1">
+            <tr>
+                <td><label>Tên sách</label></td>
+                <td>@Model.TenSach</td>
+            </tr>
+            <tr>
+                <td><label>Thể loại</label></td>
+                <td>
+                    @Model.TenTheLoai
+                </td>
+            </tr>
+            <tr>
+                <td><label>Số lượng</label></td>
+                <td>@Model.SoLuong</td>
+            </tr>
+            <tr>
+                <td><label>Gía tiền</label></td>
+                <td>@Model.GiaTien</td>
+            </tr>
+
+            <tr>
+                <td><label>Số tiền thanh toán</label></td>
+                <td>@Model.SoTienThanhToan</td>
+            </tr>
+
+
+        </table>
+
+    </div>
+
+
+</div>

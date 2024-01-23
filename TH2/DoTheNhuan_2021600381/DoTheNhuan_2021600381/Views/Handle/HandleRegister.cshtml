@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "HandleRegister";
+}
+
+<h2>HandleRegister</h2>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    tr, td {
+        padding: 0.5rem;
+    }
+
+    tr {
+        border: 1px solid #000;
+    }
+
+    button {
+        padding: 5px 10px;
+        min-width: 60px;
+    }
+</style>
+
+
+<h2>RegisterForm</h2>
+
+<div class="container">
+
+    <table>
+        <tr>
+            <td colspan="2"><h3>Registration Info</h3></td>
+        </tr>
+
+        <tr>
+            <td>First Name</td>
+            <td>
+                @ViewBag.first_name
+            </td>
+        </tr>
+
+        <tr>
+            <td>Last Name</td>
+            <td>
+                @ViewBag.last_name
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td>
+                @ViewBag.email
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td>
+                @ViewBag.password
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>City</td>
+            <td>
+                @ViewBag.city
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td>
+                @ViewBag.gender
+
+            </td>
+        </tr>
+
+
+    </table>
+
+
+
+</div>

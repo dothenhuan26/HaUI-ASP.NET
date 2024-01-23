@@ -1,0 +1,3 @@
+Sinh viên chụp các màn hình nhập dữ liệu, 
+màn hình kết quả, đưa vào file word, đặt tên file là
+ HotenSV_masv và nộp lên hệ thống học kết hợp bai 7.
