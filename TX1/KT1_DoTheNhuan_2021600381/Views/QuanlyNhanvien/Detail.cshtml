@@ -1,0 +1,85 @@
+﻿@model KT1_DoTheNhuan_2021600381.Models.Nhanvien
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        padding: 3rem;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 0.5rem 1rem;
+    }
+
+    input {
+        padding: 4px 10px;
+    }
+
+    select {
+        width: 100%;
+        padding: 4px 10px;
+    }
+
+</style>
+
+<div class="wrapper">
+    <h2>Thông tin nhân viên vừa nhập</h2>
+
+        <table border="1">
+            <tr>
+                <td>Mã nhân viên:</td>
+                <td>
+                    @Model.manv
+                </td>
+            </tr>
+            <tr>
+                <td>Họ tên:</td>
+                <td>
+                    @Model.hoten
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ:</td>
+                <td>
+                    @Model.diachi
+                </td>
+            </tr>
+            <tr>
+                <td>Số ngày làm:</td>
+                <td>
+                    @Model.songaylam
+                </td>
+            </tr>
+            <tr>
+                <td>Lương ngày:</td>
+                <td>
+                    @Model.luongngay
+                </td>
+            </tr>
+            <tr>
+                <td>Tiền lương:</td>
+                <td>
+                    @Model.tienluong
+                </td>
+            </tr>
+        </table>
+
+
+</div>
+

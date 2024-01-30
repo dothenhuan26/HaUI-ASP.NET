@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "DisplayList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+
+}
+
+<style>
+    h2 {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .wrapper {
+        margin: 0 100px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    table {
+        margin: 2rem;
+        border-collapse: collapse;
+        font-size: 1rem;
+    }
+
+        table caption {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        td, th {
+            padding: 1rem;
+            text-align: center;
+        }
+</style>
+
+<h2>Hiển thị danh sách</h2>
+<div class="wrapper">
+
+    <table border="1">
+        <caption>Nhân viên có số ngày làm nhỏ hơn 20</caption>
+        <thead>
+            <tr>
+                <th>Mã nhân viên</th>
+                <th>Họ tên</th>
+                <th>Địa chỉ</th>
+                <th>Số ngày làm</th>
+                <th>Lương ngày</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.l1)
+            {
+                <tr>
+                    <td>@item.manv</td>
+                    <td>@item.hoten</td>
+                    <td>@item.diachi</td>
+                    <td>@item.songaylam</td>
+                    <td>@item.luongngay</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <table border="1">
+        <caption>Nhân viên có lương ngày 190000</caption>
+        <thead>
+            <tr>
+                <th>Mã nhân viên</th>
+                <th>Họ tên</th>
+                <th>Địa chỉ</th>
+                <th>Số ngày làm</th>
+                <th>Lương ngày</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.l2)
+            {
+                <tr>
+                    <td>@item.manv</td>
+                    <td>@item.hoten</td>
+                    <td>@item.diachi</td>
+                    <td>@item.songaylam</td>
+                    <td>@item.luongngay</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>

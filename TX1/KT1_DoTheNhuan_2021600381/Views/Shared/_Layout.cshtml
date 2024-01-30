@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
+    html {
+        font-family: Calibri;
+    }
+
+    body {
+        background: #c3c3c3;
+        padding: 10px 100px 40px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #00a2e8;
+        color: white;
+        padding: 40px 0;
+    }
+
+        .header .heading {
+            text-align: center;
+        }
+
+    .navbar {
+        background: #99d9ea;
+        padding: 0.5rem;
+    }
+
+        .navbar .navbar-link {
+            display: flex;
+            justify-content: center;
+        }
+
+    .navbar-link a {
+        text-align: center;
+        margin: 0px 50px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .content {
+        background: white;
+    }
+</style>
+
+<body>
+
+    <header class="header">
+        <h1 class="heading">Kiểm tra 1</h1>
+    </header>
+
+    <nav class="navbar">
+        <div class="navbar-link">
+            @Html.ActionLink("Hiển thị danh sách", "DisplayList", "QuanlyNhanvien")
+            @Html.ActionLink("Nhập dữ liệu", "AddNhanvien", "QuanlyNhanvien")
+        </div>
+    </nav>
+
+    <div class="content">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

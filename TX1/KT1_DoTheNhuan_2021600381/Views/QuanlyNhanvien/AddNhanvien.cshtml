@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "AddNhanvien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        padding: 3rem;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 0.5rem 1rem;
+    }
+
+    input {
+        padding: 4px 10px;
+    }
+
+    select {
+        width: 100%;
+        padding: 4px 10px;
+    }
+    button {
+        padding: 5px 10px;
+        min-width: 60px;
+    }
+</style>
+
+<div class="wrapper">
+    <h2>Thêm nhân viên</h2>
+
+    <form action="/QuanlyNhanvien/HandleAdd" method="post">
+        <table border="1">
+            <tr>
+                <td>Mã nhân viên:</td>
+                <td>
+                    <input class="form-control" type="text" name="manv" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>Họ tên:</td>
+                <td>
+                    <input class="form-control" type="text" name="hoten" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ:</td>
+                <td>
+                    <select class="form-control" name="diachi">
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Hải Phòng">Hải Phòng</option>
+                        <option value="Quảng Ninh">Quảng Ninh</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Số ngày làm:</td>
+                <td>
+                    <input type="text" name="songaylam" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>Lương ngày:</td>
+                <td>
+                    <input type="text" name="luongngay" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class="btn btn-primary" type="submit">Thêm</button>
+                    <button class="btn btn-danger" type="reset">Hủy</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+</div>
+
