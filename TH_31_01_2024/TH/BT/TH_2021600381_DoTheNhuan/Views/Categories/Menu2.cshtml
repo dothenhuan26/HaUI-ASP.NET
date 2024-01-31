@@ -1,0 +1,6 @@
+﻿@model IEnumerable<TH_2021600381_DoTheNhuan.Models.Category>
+
+@foreach (var item in Model)
+{
+    <li> <a href="/shop/danhmuc/@item.Categoryid"> @Html.DisplayFor(modelItem => item.CategoryName) </a></li>
+}
