@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <center>
+        @Html.ActionLink("Home", "Index", "Home")<label>&nbsp;|&nbsp;</label>
+        @Html.ActionLink("About", "About", "Home")<label>&nbsp;|&nbsp;</label>
+        @Html.ActionLink("Contact", "Contact", "Home")<label>&nbsp;|&nbsp;</label>
+        @if (Session["username"] == null)
+        {
+            <a href="/LoginAcc/Login">Login</a>
+        }
+        else
+        {
+            <label>Chap mung ban &nbsp; <b>@Session["username"]</b>&nbsp;|&nbsp;</label>
+            <a href="/LoginAcc/Logout">Logout</a>
+        }
+    </center>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

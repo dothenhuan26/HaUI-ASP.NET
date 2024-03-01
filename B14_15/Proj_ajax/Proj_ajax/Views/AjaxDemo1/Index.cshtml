@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Calculate Ajax Demo</h2>
+
+
+<h4>Number 1 <input type="text" id="num1" name="num1" value="" /></h4>
+<h4>Number 2 <input type="text" id="num2" name="num2" value="" /></h4>
+<input type="button" name="" id="b1" value="Add" />
+
+<div id="rs" style="font-size:large"></div>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function (){
+        $("#b1").click(function () {
+            var n1 = $("#num1").val()
+            var n2 = $("#num2").val()
+
+            $.ajax({
+                url: '@Url.Action("Math", "AjaxDemo1")?n1=' + n1 + '&n2=' + n2,
+                success: function (data) {
+                    if (data.status == "ok") {
+                        $("#rs").html(data.result);
+                    }
+                }
+            })
+        })
+    })
+</script>
