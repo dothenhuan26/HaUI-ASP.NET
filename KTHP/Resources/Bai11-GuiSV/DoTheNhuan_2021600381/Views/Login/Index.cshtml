@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{
+    <p><label style="width: 80px">Mã:</label> <input type="text" name="ma" value="" /></p>
+    <p><label style="width: 80px">Mật khẩu:</label> <input type="text" name="password" value="" /></p>
+    <input value="Login" type="submit" />
+}
+
+<br />
+<div style="color: red;">
+    @ViewBag.errLogin
+</div>

@@ -1,0 +1,7 @@
+﻿@model IEnumerable<DoTheNhuan_2021600381.Models.Phong>
+
+@foreach (var item in Model)
+{
+    var url = "/NhanVienTheoPhong/" + item.Maphong;
+    <a href="@url">@item.Tenphong</a><label>&nbsp;|&nbsp;</label>
+}
