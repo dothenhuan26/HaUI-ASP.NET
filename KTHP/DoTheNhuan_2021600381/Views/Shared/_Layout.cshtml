@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <center>
+
+        @Html.ActionLink("Danh sách nhân viên", "Index", "Management") <label>&nbsp;|&nbsp;</label>
+        @{ Html.RenderAction("CategoryMenu", "Management");}
+
+        @if (Session["ma"] == null)
+        {
+            <a href="/Login/Index">Login</a>
+        }
+        else
+        {
+            <label>Chào mừng bạn&nbsp;</label><b>@Session["ma"]</b><label>&nbsp;|&nbsp;</label>
+            <a href="/Login/Logout">Logout</a>
+        }
+
+
+    </center>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
